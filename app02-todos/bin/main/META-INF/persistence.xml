@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" 
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="todosPU" transaction-type="JTA"> 
+        <jta-data-source>todosDataSource</jta-data-source> 
+        <class>com.distribuida.dto.Todo</class>
+        <class>com.distribuida.dto.Geo</class>
+        <class>com.distribuida.dto.Direccion</class>
+        <class>com.distribuida.dto.Company</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
+        </properties>
+        
+    </persistence-unit>
+</persistence>
